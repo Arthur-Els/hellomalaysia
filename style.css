@@ -1,0 +1,308 @@
+:root{
+    --dark-blue: #11141f;
+    --gold: #ffd54f;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+
+    font-size: 15px;
+}
+
+.navbar{
+    height: 15vh;
+    transition: background-color 250ms ease-in;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Navbar pas scroll */
+.navbar.navbar-scrolled {
+    background-color: var(--dark-blue) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav{
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link.no-arrow::after {
+    display: none !important;
+}
+
+.nav-link.no-arrow {
+    transition: transform 120ms ease, color 120ms ease;
+}
+.nav-link.no-arrow:hover{
+    transform: translateY(-2px);
+    color: var(--gold);
+}
+.nav-link.no-arrow:active {
+    transform: translateY(0);
+}
+
+/* Animasi Dropdown */
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu {
+    animation: dropdownFadeIn 250ms ease;
+}
+
+.hero{
+    height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: calc(50% + var(--hero-x, 0px)) calc(50% + var(--hero-y, 0px));
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    will-change: background-position;
+}
+
+.hero .container{
+    margin-top: 200px;
+}
+
+.section{
+    height: 100vh;
+    min-height: 100vh;
+    background-color: var(--dark-blue);
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+/* foto begron halaman */
+.hero{
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/home.jpg');
+}
+.sec-tourism{
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/tourism.jpg');
+}
+.sec-nature{
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/nature.jpg');
+}
+.sec-culinary{
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/culinary.jpg');
+}
+.sec-inspiring{
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/inspiring.jpg');
+}
+.sec-about{
+    background-color: #848484;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1));
+}
+
+
+.container .card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    padding: 20px;
+    border-radius: 15px;
+    
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* setting2an card buat halaman turis */
+.tourism-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.card-lg {
+    grid-row: 1/4;
+}
+
+.tourism-grid .card a{
+    text-decoration: none;
+    position: relative;
+    text-align: right;
+    font-size: smaller;
+
+    transition: color 150ms;
+}
+.tourism-grid .card a:hover{
+    color: var(--gold) !important;
+}
+
+/* setting2an card buat halaman kuliner */
+.culinary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.culinary-grid .card{
+    background-color: rgba(27, 32, 50, 0.5) !important;
+    color: var(--gold) !important;
+    padding: 30px;
+    height: 200px;
+}
+
+/* setting2an card buat halaman tim */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.teams-grid .card{
+    background-color: #8b8b8b !important;
+    padding: 15px;
+    align-items: center;
+    
+    transition: color 250ms, transform 250ms;
+}
+
+.teams-grid .card-leader:hover{
+    color: rgb(202, 188, 31) !important;
+}
+.teams-grid .card-uiux:hover{
+    color: rgb(39, 132, 31) !important;
+}
+.teams-grid .card-mobile:hover{
+    color: rgb(98, 0, 255) !important;
+}
+
+.card img{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+footer{
+    height: 30vh;
+    background-color: var(--dark-blue);
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+    color: #fff;
+    align-items: center;
+    display: flex;
+}
+
+footer p{
+    color: #bbb;
+}
+
+/* biar responsif */
+
+@media (max-width: 992px){
+    .navbar{
+        height: auto;
+        min-height: 72px;
+        padding: 8px 0;
+    }
+
+    .navbar-brand{
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+    }
+
+    .navbar-nav{
+        gap: 12px;
+        padding: 8px 0;
+    }
+
+    .hero .container{
+        margin-top: 140px;
+    }
+
+    .tourism-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card-lg{
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 768px){
+    .hero,
+    .section{
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 0 80px;
+    }
+
+    .hero .container{
+        margin-top: 100px;
+    }
+
+    .tourism-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .card-lg,
+    .card-sm{
+        grid-column: 1;
+    }
+
+    .card{
+        padding: 24px;
+    }
+
+    .teams-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar-brand{
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero .container{
+        margin-top: 80px;
+    }
+
+    .card{
+        padding: 18px;
+    }
+
+    .card img{
+        width: 72px;
+        height: 72px;
+        margin-bottom: 14px;
+    }
+
+    .teams-grid{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+}
