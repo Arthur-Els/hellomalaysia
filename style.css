@@ -1,5 +1,6 @@
 :root{
     --dark-blue: #11141f;
+    --blue: #323c61;
     --gold: #ffd54f;
 }
 
@@ -86,8 +87,7 @@ header{
 .section{
     height: 100vh;
     min-height: 100vh;
-    background-color: var(--dark-blue);
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1));
+    background-color: var(--blue);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -98,21 +98,12 @@ header{
 .hero{
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/home.jpg');
 }
-.sec-tourism{
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/tourism.jpg');
-}
-.sec-nature{
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/nature.jpg');
-}
 .sec-culinary{
     background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/culinary.jpg');
 }
-.sec-inspiring{
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/inspiring.jpg');
-}
 .sec-about{
     background-color: #848484;
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1));
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url(Image/inspiring.jpg);
 }
 
 
