@@ -1,305 +1,239 @@
-:root{
-    --dark-blue: #11141f;
-    --blue: #323c61;
-    --gold: #ffd54f;
+﻿:root {
+    --bg-deep: #0f1a24;
+    --bg-dark: #162536;
+    --bg-soft: #eef4f7;
+    --accent: #f6be42;
+    --text-dark: #102133;
+    --text-light: #f5fbff;
 }
 
-body{
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family: "Outfit", sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-soft);
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1030;
-
-    font-size: 15px;
+    z-index: 1000;
 }
 
-.navbar{
-    height: 15vh;
-    transition: background-color 250ms ease-in;
-    border-radius: 0 0 10px 10px;
+.navbar {
+    padding: 0.6rem 0;
+    background: rgba(7, 18, 29, 0.85);
+    backdrop-filter: blur(10px);
 }
 
-/* Navbar pas scroll */
-.navbar.navbar-scrolled {
-    background-color: var(--dark-blue) !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.navbar-brand {
+    object-fit: contain;
 }
 
-.navbar-nav{
-    align-items: center;
-    gap: 20px;
+.nav-link {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-weight: 500;
 }
 
-.nav-link.no-arrow::after {
-    display: none !important;
+.nav-link:hover {
+    color: var(--accent) !important;
 }
 
-.nav-link.no-arrow {
-    transition: transform 120ms ease, color 120ms ease;
-}
-.nav-link.no-arrow:hover{
-    transform: translateY(-2px);
-    color: var(--gold);
-}
-.nav-link.no-arrow:active {
-    transform: translateY(0);
-}
-
-/* Animasi Dropdown */
-@keyframes dropdownFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.dropdown-menu {
-    animation: dropdownFadeIn 250ms ease;
-}
-
-.hero{
-    height: 100vh;
+.hero {
     min-height: 100vh;
-    background-size: cover;
-    background-position: calc(50% + var(--hero-x, 0px)) calc(50% + var(--hero-y, 0px));
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    will-change: background-position;
-}
-
-.hero .container{
-    margin-top: 200px;
-}
-
-.section{
-    height: 100vh;
-    min-height: 100vh;
-    background-color: var(--blue);
+    background-image: linear-gradient(rgba(2, 13, 24, 0.65), rgba(2, 13, 24, 0.75)), url('Image/home.jpg');
     background-size: cover;
     background-position: center;
+    padding-top: 100px;
+}
+
+.hero-subtitle {
+    max-width: 660px;
+}
+
+.eyebrow {
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+    font-weight: 600;
+}
+
+.section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
-/* foto begron halaman */
-.hero{
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/home.jpg');
-}
-.sec-culinary{
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url('Image/culinary.jpg');
-}
-.sec-about{
-    background-color: #848484;
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1), rgba(0,0,0,1)), url(Image/inspiring.jpg);
+.section-soft {
+    background: linear-gradient(180deg, #f8fcff 0%, #ebf2f6 100%);
 }
 
-
-.container .card {
-    display: flex;
-    flex-wrap: wrap;
+.section-dark {
+    color: var(--text-light);
+    background: radial-gradient(circle at top left, #224261 0%, var(--bg-dark) 45%, var(--bg-deep) 100%);
 }
 
-.card {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    padding: 20px;
-    border-radius: 15px;
-    
-    transition: transform 300ms ease, box-shadow 300ms ease;
-}
-.card:hover {
-    transform: translateY(-4px);
+.section-head {
+    margin-bottom: 1.5rem;
 }
 
-/* setting2an card buat halaman turis */
+.section-head h2 {
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+    margin: 0;
+}
+
+.content-grid {
+    display: grid;
+    gap: 1rem;
+}
+
 .tourism-grid {
-    display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 15px;
 }
 
-.card-lg {
-    grid-row: 1/4;
+.tourism-grid .panel-lg {
+    grid-row: 1 / 4;
 }
 
-.card-religi{
-    background-image: url(Image/batu-caves.jpg);
+.panel {
+    border-radius: 18px;
+    padding: 1.3rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(20, 45, 70, 0.1);
+    box-shadow: 0 10px 30px rgba(9, 32, 54, 0.12);
+}
+
+.section-dark .panel {
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.panel h3 {
+    margin-bottom: 0.6rem;
+}
+
+.panel-photo {
+    color: #fff;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
+    border: none;
 }
 
-.tourism-grid .card a{
-    text-decoration: none;
-    position: relative;
-    text-align: right;
-    font-size: smaller;
-
-    transition: color 150ms;
-}
-.tourism-grid .card a:hover{
-    color: var(--gold) !important;
+.batu {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.7)), url('Image/batu-caves.jpg');
 }
 
-/* setting2an card buat halaman kuliner */
+.langkawi {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.7)), url('Image/langkawi.jpg');
+}
+
+.malacca {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.7)), url('Image/petronas.jpg');
+}
+
+.nature-grid,
 .culinary-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.culinary-grid .card{
-    background-color: rgba(27, 32, 50, 0.5) !important;
-    color: var(--gold) !important;
-    padding: 30px;
-    height: 200px;
+.food {
+    min-height: 220px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: none;
 }
 
-/* setting2an card buat halaman tim */
+.nasi-lemak {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.7)), url('Image/culinary.jpg') center/cover;
+}
+
+.char-kway-teow {
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7)), url('Image/langkawi.jpg') center/cover;
+}
+
+.satay {
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.7)), url('Image/batu-caves.jpg') center/cover;
+}
+
+.inspire-card {
+    max-width: 740px;
+}
+
 .teams-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.teams-grid .card{
-    background-color: #8b8b8b !important;
-    padding: 15px;
-    align-items: center;
-    
-    transition: color 250ms, transform 250ms;
+.team-card {
+    text-align: center;
 }
 
-.teams-grid .card-leader:hover{
-    color: rgb(202, 188, 31) !important;
-}
-.teams-grid .card-uiux:hover{
-    color: rgb(39, 132, 31) !important;
-}
-.teams-grid .card-mobile:hover{
-    color: rgb(98, 0, 255) !important;
-}
-
-.card img{
-    border-radius: 50%;
+.team-card img {
     width: 90px;
     height: 90px;
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
-footer{
-    height: 30vh;
-    background-color: var(--dark-blue);
-    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.1),rgba(0,0,0,0.1));
-    color: #fff;
-    align-items: center;
-    display: flex;
+footer {
+    background: #0b1521;
+    color: rgba(255, 255, 255, 0.78);
+    padding: 1.8rem 0;
 }
 
-footer p{
-    color: #bbb;
-}
-
-/* biar responsif */
-
-@media (max-width: 992px){
-    .navbar{
-        height: auto;
-        min-height: 72px;
-        padding: 8px 0;
-    }
-
-    .navbar-brand{
-        width: 72px;
-        height: 72px;
-        object-fit: contain;
-    }
-
-    .navbar-nav{
-        gap: 12px;
-        padding: 8px 0;
-    }
-
-    .hero .container{
-        margin-top: 140px;
-    }
-
-    .tourism-grid{
+@media (max-width: 992px) {
+    .tourism-grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
     }
 
-    .card-lg{
+    .tourism-grid .panel-lg {
         grid-column: 1 / 3;
         grid-row: auto;
     }
+
+    .nature-grid,
+    .culinary-grid,
+    .teams-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-@media (max-width: 768px){
-    .hero,
-    .section{
-        height: auto;
-        min-height: 100vh;
-        padding: 120px 0 80px;
+@media (max-width: 768px) {
+    .section {
+        min-height: auto;
     }
 
-    .hero .container{
-        margin-top: 100px;
+    .hero {
+        min-height: 95vh;
     }
 
-    .tourism-grid{
+    .tourism-grid,
+    .nature-grid,
+    .culinary-grid,
+    .teams-grid {
         grid-template-columns: 1fr;
     }
 
-    .card-lg,
-    .card-sm{
-        grid-column: 1;
-    }
-
-    .card{
-        padding: 24px;
-    }
-
-    .teams-grid{
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-}
-
-@media (max-width: 576px){
-    .navbar-brand{
-        width: 60px;
-        height: 60px;
-    }
-
-    .hero .container{
-        margin-top: 80px;
-    }
-
-    .card{
-        padding: 18px;
-    }
-
-    .card img{
-        width: 72px;
-        height: 72px;
-        margin-bottom: 14px;
-    }
-
-    .teams-grid{
-        grid-template-columns: minmax(0, 1fr);
-        gap: 14px;
+    .tourism-grid .panel-lg {
+        grid-column: auto;
     }
 }

@@ -1,234 +1,196 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hello Malaysia</title>
-
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Malaysia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a href="#home"><img class="navbar-brand" src="Image/nobg - hello malaysia.png" alt="Hello Malaysia Logo" width="90" height="90"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto gap-lg-4">
+                        <li class="nav-item"><a class="nav-link" href="#tourism">Tourism</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#nature">Nature</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#culinary">Culinary</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#inspiring">Inspiring Figure</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-	<!--NAVBAR PANGJANG BANGET DEMN-->
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark">
-			<div class="container">
-				<a href="#home"><img class="navbar-brand" src="Image/nobg - hello malaysia.png" alt="Malaysia Flag"
-						width="100" height="100"></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-					aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="mainNav">
-					<ul class="navbar-nav ms-auto">
+    <main>
+        <section id="home" class="hero d-flex align-items-center">
+            <div class="container text-white">
+                <p class="eyebrow">Welcome to Southeast Asia</p>
+                <h1 class="display-3 fw-bold">Hello Malaysia</h1>
+                <p class="lead hero-subtitle">One destination with vibrant culture, lush nature, iconic landmarks, and unforgettable food.</p>
+                <a href="#tourism" class="btn btn-warning btn-lg mt-2">Start Exploring</a>
+            </div>
+        </section>
 
-						<li>
-							<a class="nav-link no-arrow" href="#home">Home</a>
-						</li>
+        <section id="tourism" class="section section-soft">
+            <div class="container py-5">
+                <div class="section-head">
+                    <p class="eyebrow">Tourism</p>
+                    <h2>Top Destinations in Malaysia</h2>
+                </div>
+                <div class="content-grid tourism-grid">
+                    <article class="panel panel-lg">
+                        <h3>Kuala Lumpur City Highlights</h3>
+                        <p>Explore Petronas Twin Towers, Merdeka Square, and Bukit Bintang to experience Malaysia's modern skyline and multicultural lifestyle.</p>
+                    </article>
+                    <article class="panel panel-photo batu">
+                        <h3>Batu Caves</h3>
+                        <p>Colorful steps and spiritual heritage.</p>
+                    </article>
+                    <article class="panel panel-photo langkawi">
+                        <h3>Langkawi Island</h3>
+                        <p>Beaches, cable car, and geopark views.</p>
+                    </article>
+                    <article class="panel panel-photo malacca">
+                        <h3>Malacca Old Town</h3>
+                        <p>Historical district and riverside walk.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-						<li class="dropdown">
-							<a class="nav-link dropdown-toggle no-arrow" href="#tourism" id="tourismDropdown"
-								role="button" data-bs-toggle="dropdown" aria-expanded="false">Tourism</a>
-							<ul class="dropdown-menu" aria-labelledby="tourismDropdown">
-								<li><a class="dropdown-item" href="#">Destinations</a></li>
-								<li><a class="dropdown-item" href="#">Hotels</a></li>
-								<li><a class="dropdown-item" href="#">Travel Guide</a></li>
-							</ul>
-						</li>
+        <section id="nature" class="section section-dark">
+            <div class="container py-5">
+                <div class="section-head text-white">
+                    <p class="eyebrow">Nature</p>
+                    <h2>Wild Beauty and Green Escapes</h2>
+                </div>
+                <div class="content-grid nature-grid">
+                    <article class="panel">
+                        <h3>Cameron Highlands</h3>
+                        <p>Cool climate, tea plantations, and mountain scenery for a calm weekend retreat.</p>
+                    </article>
+                    <article class="panel">
+                        <h3>Taman Negara</h3>
+                        <p>One of the world's oldest rainforests with canopy walks, wildlife, and river adventures.</p>
+                    </article>
+                    <article class="panel">
+                        <h3>Mount Kinabalu</h3>
+                        <p>A legendary peak in Sabah with sunrise treks and panoramic views above the clouds.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-						<li class="dropdown">
-							<a class="nav-link dropdown-toggle no-arrow" href="#nature" id="natureDropdown"
-								role="button" data-bs-toggle="dropdown" aria-expanded="false">Nature</a>
-							<ul class="dropdown-menu" aria-labelledby="natureDropdown">
-								<li><a class="dropdown-item" href="#">Destinations</a></li>
-								<li><a class="dropdown-item" href="#">Hotels</a></li>
-								<li><a class="dropdown-item" href="#">Travel Guide</a></li>
-							</ul>
-						</li>
+        <section id="culinary" class="section section-soft">
+            <div class="container py-5">
+                <div class="section-head">
+                    <p class="eyebrow">Culinary</p>
+                    <h2>Signature Malaysian Food</h2>
+                </div>
+                <div class="content-grid culinary-grid">
+                    <article class="panel food nasi-lemak">
+                        <h3>Nasi Lemak</h3>
+                        <p>Coconut rice with sambal, anchovies, egg, and peanuts.</p>
+                    </article>
+                    <article class="panel food char-kway-teow">
+                        <h3>Char Kway Teow</h3>
+                        <p>Wok-fried flat noodles with seafood and smoky flavor.</p>
+                    </article>
+                    <article class="panel food satay">
+                        <h3>Satay</h3>
+                        <p>Grilled skewers served with rich peanut sauce.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-						<li class="dropdown">
-							<a class="nav-link dropdown-toggle no-arrow" href="#culinary" id="culinaryDropdown"
-								role="button" data-bs-toggle="dropdown" aria-expanded="false">Culinary</a>
-							<ul class="dropdown-menu" aria-labelledby="culinaryDropdown">
-								<li><a class="dropdown-item" href="#">Destinations</a></li>
-								<li><a class="dropdown-item" href="#">Hotels</a></li>
-								<li><a class="dropdown-item" href="#">Travel Guide</a></li>
-							</ul>
-						</li>
+        <section id="inspiring" class="section section-dark">
+            <div class="container py-5">
+                <div class="section-head text-white">
+                    <p class="eyebrow">Inspiring Figure</p>
+                    <h2>Datuk Nicol David</h2>
+                </div>
+                <article class="panel inspire-card">
+                    <div>
+                        <h3>World-Class Malaysian Athlete</h3>
+                        <p>Nicol David is one of Malaysia's most inspiring figures. She dominated world squash for years and became a symbol of discipline, consistency, and national pride.</p>
+                        <ul class="list-unstyled mb-0 mt-3">
+                            <li>8-time World Open Champion</li>
+                            <li>Former World No. 1</li>
+                            <li>Global ambassador for youth and sports</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-						<li class="dropdown">
-							<a class="nav-link dropdown-toggle no-arrow" href="#inspiring" id="inspiringDropdown"
-								role="button" data-bs-toggle="dropdown" aria-expanded="false">Inspiring Figures</a>
-							<ul class="dropdown-menu" aria-labelledby="inspiringDropdown">
-								<li><a class="dropdown-item" href="#">Destinations</a></li>
-								<li><a class="dropdown-item" href="#">Hotels</a></li>
-								<li><a class="dropdown-item" href="#">Travel Guide</a></li>
-							</ul>
-						</li>
+        <section id="about" class="section section-soft">
+            <div class="container py-5">
+                <div class="section-head">
+                    <p class="eyebrow">About Us</p>
+                    <h2>Meet the Hello Malaysia Team</h2>
+                </div>
+                <div class="content-grid teams-grid">
+                    <article class="panel team-card">
+                        <img src="Image/profile.png" alt="Arthur">
+                        <h3>Arthur</h3>
+                        <p>Leader, Website Developer</p>
+                    </article>
+                    <article class="panel team-card">
+                        <img src="Image/profile.png" alt="Keisha">
+                        <h3>Keisha</h3>
+                        <p>UI/UX Designer</p>
+                    </article>
+                    <article class="panel team-card">
+                        <img src="Image/profile.png" alt="Regina">
+                        <h3>Regina</h3>
+                        <p>UI/UX Designer</p>
+                    </article>
+                    <article class="panel team-card">
+                        <img src="Image/profile.png" alt="Alvino">
+                        <h3>Alvino</h3>
+                        <p>UI/UX Designer</p>
+                    </article>
+                    <article class="panel team-card">
+                        <img src="Image/profile.png" alt="Evan">
+                        <h3>Evan</h3>
+                        <p>Mobile Apps Developer</p>
+                    </article>
+                    <article class="panel team-card">
+                        <img src="Image/profile.png" alt="Denniz">
+                        <h3>Denniz</h3>
+                        <p>Mobile Apps Developer</p>
+                    </article>
+                    <article class="panel team-card">
+                        <img src="Image/profile.png" alt="Darrel">
+                        <h3>Darrel</h3>
+                        <p>Mobile Apps Developer</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
-						<li class="dropdown">
-							<a class="nav-link no-arrow" href="#about">About us</a>
-						</li>
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Hello Malaysia. All rights reserved.</p>
+        </div>
+    </footer>
 
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-
-	<!--INI UDAH MASUK HALAMANNYA YA-->
-	<!--HALAMAN HOME(AWAL)-->
-	<section id="home" class="hero d-flex">
-		<div class="container-fluid text-white d-flex align-items-center">
-			<div class="container">
-				<h1 class="display-4 fw-bold">Hello Malaysia</h1>
-				<p class="lead">Explore Malaysia with just your hands.</p>
-			</div>
-		</div>
-	</section>
-
-	<!--HALAMAN TURIS-->
-	<section id="tourism" class="section sec-tourism d-flex">
-		<div class="container">
-			<div class="tourism-grid">
-				<!-- card gede -->
-				<div class="card card-lg text-white">
-					<h1>Tourism</h1>
-					<p>Malaysia has diverse tourism potential, encompassing cultural, historical,<br> religious, and natural aspects. Malaysia exhibits a vibrant multicultural heritage,<br> and is deeply rooted in culture.</p>
-				</div>
-				<!-- card kecil -->
-				<div class="card card-religi text-white">
-					<h3>Batu Caves</h3>
-					<p>Religious sites</p>
-					<a href="" class="text-light">Explore more &RightArrow;</a>
-				</div>
-
-				<div class="card text-white">
-					<h3>Langkawi Island</h3>
-					<p>Nature sites</p>
-					<a href="" class="text-light">Explore more &RightArrow;</a>
-				</div>
-
-				<div class="card text-white">
-					<h3>Petronas Twin Towers</h3>
-					<p>Supreme sites</p>
-					<a href="" class="text-light">Explore more &RightArrow;</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--HALAMAN NATUR-->
-	<section id="nature" class="section sec-nature d-flex">
-		<div class="container-fluid text-white d-flex align-items-center text-center">
-			<div class="container">
-				<h1 class="display-4 fw-bold mb-4">Nature</h1>
-				<p class="lead mb-4">Discover the beauty and nature of Malaysia</p>	
-			</div>
-		</div>
-	</section>
-
-	<!--HALAMAN KULINER-->
-	<section id="culinary" class="section sec-culinary d-flex">
-		<div class="container-fluid text-white d-flex align-items-center text-center">
-			<div class="container">
-				<h1 class="display-4 fw-bold mb-4">Culinary</h1>
-				<p class="lead mb-4">Discover the beauty and culture of Malaysia</p>
-
-				<div class="culinary-grid">
-					<div class="card text-white">
-						<h3>Nyam</h3>
-						<p>Makanan</p>
-					</div>
-
-					<div class="card text-white">
-						<h3>Nyam</h3>
-						<p>Makanan</p>
-					</div>
-
-					<div class="card text-white">
-						<h3>Nyam</h3>
-						<p>Makanan</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--HALAMAN FIGUR-->
-	<section id="inspiring" class="section sec-inspiring d-flex">
-		<div class="container-fluid text-white d-flex align-items-center text-center">
-			<div class="container">
-				<h1 class="display-4 fw-bold mb-4">Inspiring Figures</h1>
-				<p class="lead mb-4">Discover the beauty and culture of Malaysia</p>
-			</div>
-		</div>
-	</section>
-
-	<!--HALAMAN YKKA-->
-	<section id="about" class="section sec-about d-flex">
-		<div class="container-fluid text-white d-flex align-items-center text-center">
-			<div class="container">
-				<h1 class="display-4 fw-bold pb-4">Our Team</h1>
-				<div class="teams-grid">
-					<div class="card card-leader text-white">
-						<img src="Image/profile.png" alt="">
-						<h3>Arthur</h3>
-						<p>Leader, Website Developer</p>
-					</div>
-
-					<div class="card card-uiux text-white">
-						<img src="Image/profile.png" alt="">
-						<h3>Keisha</h3>
-						<p>UI/UX Designer</p>
-					</div>
-
-					<div class="card card-uiux text-white">
-						<img src="Image/profile.png" alt="">
-						<h3>Regina</h3>
-						<p>UI/UX Designer</p>
-					</div>
-
-					<div class="card card-uiux text-white">
-						<img src="Image/profile.png" alt="">
-						<h3>Alvino</h3>
-						<p>UI/UX Designer</p>
-					</div>
-
-					<div class="card card-mobile text-white">
-						<img src="Image/profile.png" alt="">
-						<h3>Evan</h3>
-						<p>Mobile Apps Developer</p>
-					</div>
-
-					<div class="card card-mobile text-white">
-						<img src="Image/profile.png" alt="">
-						<h3>Denniz</h3>
-						<p>Mobile Apps Developer</p>
-					</div>
-
-					<div class="card card-mobile text-white">
-						<img src="Image/profile.png" alt="">
-						<h3>Darrel</h3>
-						<p>Mobile Apps Developer</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--FOOTER DISINI YA-->
-	<footer class="bg-dark">
-		<div class="container text-center text-white">
-			<p>&copy; 2026 Hello Malaysia. All rights reserved.</p>
-		</div>
-	</footer>
-
-
-	<script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-	<script src="script.js"></script>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
