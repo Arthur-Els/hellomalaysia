@@ -134,6 +134,12 @@ header{
     grid-row: 1/4;
 }
 
+.card-religi{
+    background-image: url(Image/batu-caves.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
 .tourism-grid .card a{
     text-decoration: none;
     position: relative;
