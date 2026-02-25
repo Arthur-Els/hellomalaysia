@@ -31,10 +31,13 @@ header {
 }
 
 .navbar {
-    padding: 0.6rem 0;
-    background: rgba(7, 18, 29, 0.85);
+    padding: 0.5rem 0;
+}
+.navbar.navbar-scrolled{
+    background: rgba(11, 27, 44, 0.75);
     backdrop-filter: blur(10px);
 }
+
 
 .navbar-brand {
     object-fit: contain;
@@ -235,5 +238,65 @@ footer {
 
     .tourism-grid .panel-lg {
         grid-column: auto;
+ height: 60px;
+    }
+
+    .hero .container{
+        margin-top: 80px;
+    }
+
+    .card{
+        padding: 18px;
+    }
+
+    .card img{
+        width: 72px;
+        height: 72px;
+        margin-bottom: 14px;
+    }
+
+    .teams-grid{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+ height: 60px;
+    }
+
+    .hero .container{
+        margin-top: 80px;
+    }
+
+    .card{
+        padding: 18px;
+    }
+
+    .card img{
+        width: 72px;
+        height: 72px;
+        margin-bottom: 14px;
+    }
+
+    .teams-grid{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+ height: 60px;
+    }
+
+    .hero .container{
+        margin-top: 80px;
+    }
+
+    .card{
+        padding: 18px;
+    }
+
+    .card img{
+        width: 72px;
+        height: 72px;
+        margin-bottom: 14px;
+    }
+
+    .teams-grid{
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
     }
 }
